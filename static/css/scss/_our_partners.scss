@@ -1,0 +1,68 @@
+.our_partners{
+    text-align: center;
+
+    .our_partners_slider{
+        width: 100%;
+        margin: 50px auto 0 auto;
+        position: relative;
+        .item{
+            display: block;
+            // margin: 0 60px;
+            // width: 100px;
+            height: 200px;
+            background-color: gray;
+        }
+    }
+}
+
+.slick-arrow{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 0px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+
+    @include transition(all);
+
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border-bottom: 5px solid #000;
+        border-right: 5px solid #000;
+        transform: rotate(140deg);
+        @include transition(all);
+    }
+
+    &:hover{
+        background-color: $main-color;
+        border: 1px solid transparent;
+
+        &::before{
+            border-bottom: 5px solid #fff;
+            
+            border-right: 5px solid #fff;
+        }
+    }
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+    left: 0;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+    right: 0;
+    &::before{
+        transform: rotate(-40deg);
+    }
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}

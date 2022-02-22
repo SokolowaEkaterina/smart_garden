@@ -8,7 +8,6 @@ $(document).ready(function() {
         }
     });
 
-    if ( /*window.innerWidth > 600 &*/ window.innerWidth < 840 ) {
         $('.menu_btn').click(function(){
             if($('.menu_btn').hasClass('active')){
                 $('.menu_btn').removeClass('active');
@@ -18,7 +17,6 @@ $(document).ready(function() {
                 $('.navigation').addClass('slid_active');
             }
         });
-    };
 
     $(window).on('load resize', function() {
         if ($(window).width() < 691) {
@@ -30,5 +28,11 @@ $(document).ready(function() {
         } else {
           $('.services_block').slick('unslick');
         }
+      });
+
+      $('.our_partners_slider').slick({
+        centerMode: true,
+        arrows: true,
+        slidesToShow: 4,
       });
 });

@@ -14,6 +14,9 @@ $main_gray_color: #252525;
     transition: $property 0.3s ease 0s;
 }
 
+.margin{
+    margin-top: 100px;
+}
 
 .wrapper {
     position: relative;
@@ -84,13 +87,16 @@ h1{
 }
 
 h2, .h2{
+    display: inline;
     font-size: 30px;
+    position: relative;
+
     &::before{
         content: '';
-        width: 100%;
+        width: 500%;
         height: 2px;
         // left: clac(-100% + 30px);
-        left: -100%;
+        left: -505%;
         top: 50%;
         transform: translateY(-50%);
         background-color: $text-color;
@@ -99,14 +105,54 @@ h2, .h2{
 
     &.left{
         &:before{
-            left: auto;
-            // right: clac(-100% + 30px);
+            display: none;
+        }
+
+        &::after{
+            content: '';
+            text-align: left;
+            width: 500%;
+            height: 2px;
+            // left: clac(-100% + 30px);
+            right: -505%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $text-color;
+            position: absolute;
+            // display: inline-block;
+        }
+    }
+    
+    &.center{
+        &::after{
+            content: '';
+            text-align: left;
+            width: 600%;
+            height: 2px;
+            // left: clac(-100% + 30px);
+            right: -605%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $text-color;
+            position: absolute;
+            // display: inline-block;
         }
     }
 }
 
+@media screen and (max-width:960px){
+    h2, .h2{
+        font-size: 25px;
+    }
+}
+
+.h3{
+    font-size: 24px;
+    text-transform: none;
+}
 p{
     font-size: 18px;
+    line-height: 25px;
     color: $text-color;
 }
 
@@ -136,6 +182,30 @@ a{
         background-color: $main_gray_color;
     }
 
+    &.white{
+        background-color: #fff;
+        color: #000;
+        &:hover{
+            background-color: $main_gray_color;
+            color: #fff;
+        }
+    }
+
+}
+
+.image_shale{
+    overflow: hidden;
+    position: relative;
+
+    img{
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
 }
 
 // end base ///////////////////

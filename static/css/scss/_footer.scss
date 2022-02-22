@@ -1,0 +1,39 @@
+footer{
+    background-color: $main_gray_color;
+
+    .footer_block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 55px 0;
+
+
+        .logo{
+            width: 186px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            a{
+                text-align: right;
+                font-size: 14px;
+            }
+            ul li{
+                display: block;
+                align-self: flex-end;
+                a{
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+            }
+
+            .item{
+                a{
+                    color: #fff;
+                    display: block;
+                }
+            }
+        }
+    }
+}
