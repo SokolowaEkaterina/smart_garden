@@ -29,9 +29,20 @@
 .poducts_block{
     margin-top: 50px;
     width: 100%;
-    display: flex;
+    display: flex;flex-wrap: wrap;
     justify-content: space-between;
     align-items: top;
+
+    &.products_page{
+        flex-wrap: wrap;
+        justify-content: none;
+
+        .item{
+            border: 1px solid #000;
+            margin-bottom: 50px;
+            width: calc(35% - 120px);
+        }
+    }
 
     .item{
         width: calc(33% - 125px);
@@ -62,6 +73,89 @@
                 li{
                     margin: 5px 0;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .poducts_block{
+
+        &.products_page{
+            .item{
+                width: calc(33% - 20px);
+            }
+        }
+
+        .item{
+            width: calc(33% - 70px);
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .poducts_block{
+        .item{
+            width: calc(33% - 20px);
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    .products{
+        p{
+            width: 70%;
+        }
+    }
+    .poducts_block{
+        justify-content: none;
+        // margin: 0 -20px;
+        flex-wrap: wrap;
+        width: 100%;
+    
+        .item{
+            width: calc(50% - 20px);
+            margin: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        &.products_page{
+            .item{
+                width: calc(49% - 20px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    .products p{
+        width: 100%;
+    }
+    .poducts_block{
+        .item{
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        &.products_page{
+            .item{
+                width: 80%;
+            }
+        }
+    }
+}
+@media screen and (max-width:460px) {
+    .poducts_block{
+        .item{
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        &.products_page{
+            .item{
+                width: 100%;
             }
         }
     }
