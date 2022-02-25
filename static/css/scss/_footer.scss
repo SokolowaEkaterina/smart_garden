@@ -1,5 +1,7 @@
 footer{
     background-color: $main_gray_color;
+    position: relative;
+    z-index: 1;
 
     .footer_block{
         display: flex;

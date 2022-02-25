@@ -28,11 +28,32 @@ $(document).ready(function() {
         } else {
           $('.services_block').slick('unslick');
         }
-      });
+    });
 
       $('.our_partners_slider').slick({
         // centerMode: true,
         arrows: true,
         slidesToShow: 4,
       });
+
+      $(window).on('load resize', function() {
+        if ($(window).width() < 967) {
+          $('.category').slick({
+            // centerMode: true,
+            arrows: true,
+            slidesToShow: 3,
+            responsive: [
+              {
+                breakpoint: 355,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                }
+              }
+            ]
+          });
+        } else {
+          $('.category').slick('unslick');
+        }
+    });
 });

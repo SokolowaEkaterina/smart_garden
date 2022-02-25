@@ -211,6 +211,13 @@ a{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom;
+            @include transition(all);
+        }
+
+        &:hover{
+            &::after{
+                filter: invert(100%);
+            }
         }
     }
 
