@@ -1,4 +1,27 @@
 $(document).ready(function() {
+
+  // const animItems = document.querySelectorAll('.animate');
+
+  // if(animItems.length > 0){
+  //   function animOnScroll(params){
+  //     for(let index = 0; index < animItems.length; index++){
+  //       const animItem = animItems[index];
+  //     }
+  //   }
+  // }
+
+  // if ( window.innerWidth>0 ) {
+	// 	$('.main_section').toggleClass("hidden");
+	// 	//$('#header').addClass('animated');
+	// }; 
+	$(window).on('load scroll', function(){
+	    $('.main_section').each(function(){
+		if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.5 ) ) {
+		    $(this).addClass('animated');
+		}
+	    });
+	});
+
        // языки
 	$('.language').click(function(){
         if ($('.language').hasClass("show")) {
