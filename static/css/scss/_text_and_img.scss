@@ -5,6 +5,13 @@
     position: relative;
 
     .text{
+        
+        h2{
+            &.left{
+                background-color: #fff;
+            }
+        }
+
         height: auto;
         box-sizing: border-box;
         width: calc(50% - 100px);
@@ -282,7 +289,7 @@
     .text_image{
         .text{
             width: calc(50% - 100px);
-            margin: 0 auto;
+            // margin: 0 auto;
     
             padding-bottom: 100px;
         }
@@ -374,21 +381,32 @@
 }
 @media screen and (max-width:820px){
     .text_img_block{
-        .text_image .text{
-            
+        // padding-top: 200px;
+        .text_image.text{
             padding-bottom: 100px;
             padding-top: 30px;
+
         }
+
+        .image_shale{
+            top: 0;
+            height: 200px;
+        }  
+        
     }
     .text_image{
+        padding-top: 320px;
         flex-wrap: wrap;
     
         .text{
             width: 90%;
             order:2;
     
+            padding: 0;
+            margin: 0;
             padding-bottom: 100px;
             padding-top: 30px;
+
         }
         .image_shale{
             order: 1;
@@ -408,13 +426,16 @@
                 }
             }
         }
-        .right{
-            order: 1;
-    
-            h2{
-                margin-right: 0;
-                margin-left: 100px;
-                float: left;
+
+        &.right{
+            .image_shale{
+                order: 1;
+        
+                h2{
+                    margin-right: 0;
+                    margin-left: 100px;
+                    float: left;
+                }
             }
         }
     }
@@ -439,6 +460,7 @@
             }
             .image_shale{
                 border-radius: 25px;
+                top: 0;
             }
         }
     }
@@ -455,10 +477,7 @@
         .text_image{
             .image_shale{
                 border-radius: 25px;
-    
-                img{
-                    opacity: 50%;
-                }
+                top: 0;
             }
         }
     }
@@ -470,6 +489,7 @@
     
         .image_shale{
             border-radius: 25px;
+            top: 0;
     
             img{
                 opacity: 50%;
@@ -487,7 +507,7 @@
 
         .text_image{
             &::before{
-                top: 50%;
+                top: 330px;
             }
         }
     }

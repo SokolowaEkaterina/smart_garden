@@ -12,6 +12,10 @@
     &.main_screen_others{
         padding-top: 150px;
         padding-bottom: 150px;
+
+        .second_text{
+            opacity: 1;
+        }
     }
 
     video{

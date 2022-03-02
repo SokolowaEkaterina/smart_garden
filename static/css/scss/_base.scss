@@ -88,10 +88,14 @@ h1, .h1{
 
 h2, .h2{
     display: inline;
+    width: auto;
+    line-height: 35px;
     font-size: 30px;
     position: relative;
+    z-index: 2;
 
     &::before{
+        z-index: 1;
         content: '';
         width: 500%;
         height: 2px;
@@ -104,6 +108,8 @@ h2, .h2{
     }
 
     &.left{
+        position: relative;
+        z-index: 10;
         &:before{
             display: none;
         }
@@ -115,11 +121,12 @@ h2, .h2{
             height: 2px;
             // left: clac(-100% + 30px);
             right: -505%;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 40%;
+            transform: translateY(-60%);
             background-color: $text-color;
             position: absolute;
             // display: inline-block;
+            z-index: -1;
         }
     }
     
