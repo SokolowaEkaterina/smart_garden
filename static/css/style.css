@@ -735,24 +735,31 @@ header .first_header .navigation .second_header .contacts .soc a {
   position: relative;
 }
 .text_image .text {
+  height: auto;
   box-sizing: border-box;
-  width: calc(50% - 200px);
+  width: calc(50% - 100px);
   order: 2;
-  margin: 0 auto;
-  padding-bottom: 100px;
+  margin-left: auto;
+  padding: 50px 0;
+  align-items: center;
+  vertical-align: middle;
 }
 .text_image .image_shale {
   overflow: hidden;
+  vertical-align: middle;
+  align-items: center;
   box-sizing: border-box;
-  height: 304px;
   width: 50%;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-color: #fff;
+  position: absolute;
+  height: 100%;
+  left: 0;
 }
 .text_image .image_shale h2 {
   float: right;
-  margin-top: 150px;
+  margin-top: 130px;
   margin-right: 100px;
   color: #fff;
   z-index: 2;
@@ -760,13 +767,20 @@ header .first_header .navigation .second_header .contacts .soc a {
 .text_image .image_shale h2::before, .text_image .image_shale h2::after {
   background-color: #fff;
 }
-.text_image .right {
-  order: 2;
+
+.right .image_shale {
+  right: 0;
+  left: auto;
+  opacity: 1;
 }
-.text_image .right h2 {
+.right .image_shale h2 {
   margin-right: 0;
   margin-left: 100px;
   float: left;
+}
+.right .text {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .about_company {
@@ -877,9 +891,6 @@ header .first_header .navigation .second_header .contacts .soc a {
   background-repeat: no-repeat;
   background-position: center;
   filter: invert(100%);
-}
-.text_img_block .text_image .text {
-  padding-bottom: 0px;
 }
 .text_img_block .text_image:nth-child(even):before {
   right: -15%;
@@ -2524,7 +2535,16 @@ footer .footer_block nav .soc a {
   opacity: 1;
   animation: fadeInRight 1s;
 }
-.our_mission.animated .text_image .right, .about_company.animated .text_image .right {
+.our_mission.animated .text_image .image_shale, .about_company.animated .text_image .image_shale {
+  opacity: 1;
+  animation: fadeInLeft 1s;
+}
+
+.our_mission.animated .text_image .text {
+  opacity: 1;
+  animation: fadeInRight 1s;
+}
+.our_mission.animated .text_image .image_shale {
   opacity: 1;
   animation: fadeInLeft 1s;
 }

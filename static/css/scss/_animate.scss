@@ -119,7 +119,20 @@
       animation: fadeInRight 1s;
     }
   
-    .right{
+    .image_shale{
+      opacity: 1;
+      animation: fadeInLeft 1s;
+    }
+  }
+}
+.our_mission{
+  &.animated .text_image {
+    .text{
+      opacity: 1;
+      animation: fadeInRight 1s;
+    }
+  
+    .image_shale{
       opacity: 1;
       animation: fadeInLeft 1s;
     }
