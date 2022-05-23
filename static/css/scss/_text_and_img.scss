@@ -317,9 +317,28 @@
 @media screen and (max-width:1060px){
     .text_image{
         .text{
-            width: calc(50% - 80px);
+            // width: calc(50% - 80px);
+
+            width: calc(50% - 40px);
     
             padding-bottom: 50px;
+        }
+        .image_shale{
+            h2{
+                float: right;
+                margin-right: 50px;
+            }
+
+            h2.left{
+                margin-left: 50px;
+                float: left;
+            }
+        }
+        .right{
+            h2{
+                float: left;
+                margin-left: 50px;
+            }
         }
     }
     .about_company{
@@ -356,26 +375,6 @@
     .our_mission{
         &:before{
             font-size: 120px;
-        }
-    }
-}
-
-@media screen and (max-width:960px){
-    .text_image{
-        .text{
-            width: calc(50% - 40px);
-        }
-        .image_shale{
-            h2{
-                float: right;
-                margin-right: 50px;
-            }
-        }
-        .right{
-            h2{
-                float: left;
-                margin-left: 50px;
-            }
         }
     }
 }
@@ -535,11 +534,16 @@
                 float: right;
                 margin-right: 20px;
             }
+
+            h2.left{
+                margin-left: 20px;
+                // width: 50%;
+            }
         }
         .right{
             h2{
                 float: left;
-                margin-left: 20px;
+                margin-left: 0px;
             }
         }
     }

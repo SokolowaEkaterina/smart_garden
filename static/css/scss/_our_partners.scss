@@ -14,16 +14,29 @@
             position: relative;
             display: block;
             margin: 0 60px;
-            // width: 100px;
+            width: 100px;
             height: 200px;
-            background-color: gray;
+            overflow: hidden;
+            @include transition(all);
+
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover{
+                opacity: 50%;
+
+                filter: blur(2px);
+            }
         }
 
         .slick-arrow{
             // display: inline-block;
             // box-sizing: border-box;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 0px;
@@ -31,6 +44,7 @@
             border: 1px solid #000;
             position: absolute;
             // float: left;
+            background-color: transparent;
             z-index: 2;
         
         
@@ -39,11 +53,11 @@
             &::before{
                 content: '';
                 display: inline-block;
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 background-color: transparent;
-                border-bottom: 5px solid #000;
-                border-right: 5px solid #000;
+                border-bottom: 3px solid #000;
+                border-right: 3px solid #000;
                 transform: rotate(140deg);
                 @include transition(all);
             }
@@ -53,9 +67,9 @@
                 border: 1px solid transparent;
         
                 &::before{
-                    border-bottom: 5px solid #fff;
+                    border-bottom: 3px solid #fff;
                     
-                    border-right: 5px solid #fff;
+                    border-right: 3px solid #fff;
                 }
             }
         }
@@ -82,5 +96,63 @@
         }
         /* Стрелка не активная */
         // .slick-arrow.slick-disabled{}
+    }
+}
+@media screen and (max-width:1320px) {
+    .our_partners{
+    
+        .our_partners_slider{
+            .item{
+                margin: 0 30px;
+                width: 160px;
+                height: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .our_partners{
+    
+        .our_partners_slider{
+            padding: 0 0px;
+            overflow: visible;
+            .item{
+                margin: 0 30px;
+                width: 100%;
+                height: auto;
+            }
+
+            .slick-arrow{
+                width: 50px;
+                height: 50px;
+                top: auto;
+                bottom: -50px;
+                transform: translateY(0%);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width:350px) {
+    .our_partners{
+    
+        .our_partners_slider{
+            padding: 0 0px;
+            overflow: visible;
+            .item{
+                margin: 0 10px;
+                width: 100%;
+                height: auto;
+            }
+
+            .slick-arrow{
+                width: 50px;
+                height: 50px;
+                top: auto;
+                bottom: -50px;
+                transform: translateY(0%);
+                border-radius: 50%;
+            }
+        }
     }
 }

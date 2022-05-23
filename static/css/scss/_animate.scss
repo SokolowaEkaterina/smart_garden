@@ -159,21 +159,52 @@
   }
 }
 
+.products_page .item{opacity: 0;}
+.products_page .item{
+  &.animated{
+    opacity: 1;
+  }
+  &.animated:nth-child(odd){
+    opacity: 1;
+    animation: fadeInRight 1s;
+  }
+  &.animated:nth-child(even){
+    opacity: 1;
+    animation: fadeInLeft 1s;
+  }
+}
+
 .poducts_block {
   &.main_section{
     .item{opacity: 0;}
   }
 }
-.animated .poducts_block{
+.animated .products_slider{
+  // .item{
+  //   opacity: 1;
+  //   animation: zoomIn 1s;
+  // }
   .item:nth-child(1){
     opacity: 1;
-    animation: fadeInUp 1s;
+    animation: fadeInUp 2s;
   }
   .item:nth-child(2){
     opacity: 1;
     animation: fadeInUp 1.5s;
   }
   .item:nth-child(3){
+    opacity: 1;
+    animation: fadeInUp 1s;
+  }
+  .item:nth-child(4){
+    opacity: 1;
+    animation: fadeInUp 1s;
+  }
+  .item:nth-child(5){
+    opacity: 1;
+    animation: fadeInUp 1.5s;
+  }
+  .item:nth-child(6){
     opacity: 1;
     animation: fadeInUp 2s;
   }

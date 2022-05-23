@@ -42,7 +42,7 @@ $(document).ready(function() {
         });
 
     $(window).on('load resize', function() {
-        if ($(window).width() < 691) {
+        if ($(window).width() < 750) {
           $('.services_block').slick({
             centerMode: true,
             arrows: false,
@@ -57,6 +57,32 @@ $(document).ready(function() {
         // centerMode: true,
         arrows: true,
         slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 730,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 540,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: true,
+              // arrows:false,
+              
+            }
+          }
+        ]
       });
 
       $(window).on('load resize', function() {
@@ -78,5 +104,40 @@ $(document).ready(function() {
         } else {
           $('.category').slick('unslick');
         }
+    });
+
+    $('.products_slider').slick({
+      infinite:true,
+      autoplay:true,
+      autoplaySpeed: 2000,
+      slidesToShow: 3,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1120,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 870,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+          }
+        }
+        ,
+        {
+          breakpoint: 620,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+          }
+        }
+      ]
     });
 });
